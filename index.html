@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emine Senkardesler · Spatial Informatics PhD Student, UIUC</title>
+<meta name="description" content="Emine Senkardesler is a PhD student in Informatics (Spatial Informatics) at the University of Illinois Urbana-Champaign, working on permafrost thaw risk to infrastructure and on satellite remote sensing for crops, crop insurance and extreme weather.">
+<meta name="author" content="Emine Senkardesler">
+<meta property="og:title" content="Emine Senkardesler · Spatial Informatics PhD Student, UIUC">
+<meta property="og:description" content="Geospatial and satellite remote sensing for permafrost thaw risk, crop insurance, and agricultural supply chains.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#13294b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313294b'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23ffffff'%3EES%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Emine Senkardesler</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav aria-label="Primary">
+      <ul id="menu">
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO / ABOUT ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid" id="hero-grid">
+      <div>
+        <span class="eyebrow">University of Illinois Urbana-Champaign</span>
+        <h1>Emine Senkardesler</h1>
+        <p class="role">PhD student in Informatics &middot; Spatial Informatics</p>
+        <p>I use geospatial data and satellite remote sensing to map permafrost thaw risk to the infrastructure communities depend on, and to study how crop insurance losses and grain supply chains respond to extreme weather. I am a PhD student at UIUC (anticipated 2029), advised by <strong>Elhan Ersoz</strong> and <strong>Nico Martin</strong>.</p>
+        <p>Before my PhD, I worked as a Remote Sensing and GIS Specialist at Farmlabs &amp; Geosys in Ankara, building zone maps for variable-rate fertilization and running drought analyses from satellite time series.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn ghost" href="assets/Emine_Senkardesler_CV.pdf">Download CV</a>
+          <a class="btn ghost" href="mailto:emine2@illinois.edu">Email me</a>
+        </div>
+      </div>
+
+      <!--
+        HERO GIF SLOT
+        Drop the animated 2012 drought (SPEI) GIF at:  assets/illinois-drought.gif
+        The slot below stays hidden until that file loads (see js/main.js),
+        so the page looks complete whether or not the file exists.
+        Update the caption below once you have the final animation.
+      -->
+      <figure class="hero-media" id="hero-media" hidden>
+        <img id="hero-gif" data-src="assets/illinois-drought.gif" alt="Animated map of the 2012 drought drying out across Illinois and the Midwest, shown with the Standardized Precipitation Evapotranspiration Index (SPEI)">
+        <figcaption>The 2012 drought, shown with the Standardized Precipitation Evapotranspiration Index (SPEI).</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research">
+  <div class="wrap">
+    <h2>Research interests</h2>
+    <p class="lead">My work follows climate and weather hazards from space-based observation to decisions on the ground, in Arctic communities and in agriculture.</p>
+    <div class="chips" style="margin-top:28px">
+      <div class="chip">
+        <h3>Permafrost thaw &amp; infrastructure</h3>
+        <p>Identifying permafrost thaw risk areas for buildings and infrastructure, and potential places for neighborhood extension, with the Permafrost Discovery Gateway.</p>
+      </div>
+      <div class="chip">
+        <h3>Climate risk in agriculture</h3>
+        <p>Crop insurance, yield and weather data used to build mitigation scenarios for resilient agricultural supply chains.</p>
+      </div>
+      <div class="chip">
+        <h3>Remote sensing for crops &amp; extreme weather</h3>
+        <p>Satellite time series, drought indices and crop maps to understand how farms and regions respond to drought and excess moisture.</p>
+      </div>
+      <div class="chip">
+        <h3>GeoAI &amp; spatial analysis</h3>
+        <p>Machine learning, deep learning and spatial statistics applied to geospatial and environmental data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="lead" style="margin-bottom:28px">Ongoing research and analysis projects, with a short summary of the question, the approach and where each one stands.</p>
+
+    <div class="cards">
+
+      <!-- Permafrost -->
+      <article class="card wide">
+        <div class="card-body">
+          <h3>Permafrost thaw risk to infrastructure in Wainwright, Alaska</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Remote sensing</span><span class="tag">Risk mapping</span><span class="tag">Uncertainty analysis</span></div>
+          <p><strong>Question:</strong> Which buildings in Wainwright, an Arctic coastal community, are exposed to thawing permafrost, and where is safer ground for neighborhood growth? This work is part of the Permafrost Discovery Gateway.</p>
+          <p><strong>Approach:</strong> I combine satellite and geospatial layers on ground ice, ice-wedge polygons, drained lake basins, ponding, coastal erosion and the built environment on a fine grid over the community. Risk is defined as the combination of hazard, exposure and vulnerability, and I test how sensitive the resulting maps are to the choices made in weighting the hazard layers.</p>
+          <p><strong>Where it stands:</strong> The analysis is ongoing. The aim is a planning map that shows both a risk class and how confident we are in it, so that local decision makers can see where building is a concern and where expansion looks safer.</p>
+        </div>
+      </article>
+
+      <!-- Crop insurance -->
+      <article class="card wide">
+        <div class="card-body">
+          <h3>Crop insurance losses in the U.S. Corn Belt</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Spatial statistics</span><span class="tag">Climate risk</span><span class="tag">Crop insurance</span></div>
+          <p><strong>Question:</strong> Where does climate risk concentrate in the Corn Belt, and who receives federal crop-insurance payments? I treat insurance losses as a signal of how fragile farming is under climate stress.</p>
+          <p><strong>Approach:</strong> I build a county-level panel for Corn Belt states from USDA Risk Management Agency loss records, joined with gridMET weather and drought indices, soil properties and Census of Agriculture data. I use spatial statistics and geographically weighted regression to see how loss patterns cluster and shift from year to year.</p>
+          <p><strong>Where it stands:</strong> Work is ongoing. Early signs are that losses cluster geographically, that the hot spots move with the weather rather than staying put, and that a small set of counties are persistently vulnerable.</p>
+        </div>
+      </article>
+
+      <!-- Supply chains -->
+      <article class="card wide">
+        <div class="card-body">
+          <h3>Supply chains: interstate cereal-grain trade under weather shocks</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Gravity model</span><span class="tag">Supply chains</span><span class="tag">Drought indices</span></div>
+          <p><strong>Question:</strong> When drought or a wet season hits, how does it change where U.S. grain is shipped? This project is part of the Resilient Agricultural Supply Chains Against Climate Hazards (RASCCH) research.</p>
+          <p><strong>Approach:</strong> I estimate a gravity model of interstate cereal-grain shipments with Poisson pseudo-maximum likelihood, using freight data from the Freight Analysis Framework. A key idea is crop-specific weather: drought is averaged separately over corn ground and over other-cereal ground, weighted by USDA crop acreage, so the two can push trade in different directions.</p>
+          <p><strong>Where it stands:</strong> This is ongoing work. Early indications are that drought and excess moisture affect shipments differently depending on whether they hit the origin or the destination, and that one generic drought index can hide these opposing responses.</p>
+        </div>
+      </article>
+
+      <!-- Rotation -->
+      <article class="card wide">
+        <div class="card-media">
+          <figure>
+            <img src="assets/rotation-regions-map.png" width="1600" height="1004" loading="lazy" alt="Map of U.S. Corn Belt counties colored by four rotation regions found with k-means clustering: balanced corn-soybean, wheat-mixed, corn-dominant and strong rotation.">
+            <figcaption>Rotation regions in the Corn Belt (work in progress), from k-means clustering of county rotation patterns.</figcaption>
+          </figure>
+        </div>
+        <div class="card-body">
+          <h3>Crop rotation patterns in the U.S. Corn Belt</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Remote sensing</span><span class="tag">Panel regression</span><span class="tag">Markov chains</span><span class="tag">2008&ndash;2024</span></div>
+          <p><strong>Question:</strong> How do farmers rotate corn and soybeans, and does rotation reduce yield and insurance losses?</p>
+          <p><strong>Approach:</strong> This study is still in progress. I am using 17 years (2008&ndash;2024) of 30&nbsp;m USDA Cropland Data Layer imagery across eight Corn Belt states, estimating Markov transition matrices and linking rotation to yields and insurance outcomes with panel fixed-effects regression.</p>
+          <p><strong>Emerging patterns (analysis ongoing):</strong></p>
+          <ul>
+            <li>Most corn fields switch to soybeans in the following year, and most soybean fields return to corn.</li>
+            <li>Continuous corn covers a minority of corn acres and declined over the period.</li>
+            <li>The yield benefit of rotation appears to have weakened in recent years, which I am still examining.</li>
+            <li>Corn following soybeans appears to have lower insurance loss ratios than continuous corn.</li>
+            <li>K-means clustering points to four distinct rotation regions.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- G2F -->
+      <article class="card">
+        <div class="card-media">
+          <figure>
+            <img src="assets/g2f-roc-curves.png" width="846" height="701" loading="lazy" alt="ROC curves for logistic regression (GLM), neural network (NNET) and gradient boosting (GBM) models, with AUC of 0.88, 0.82 and 0.88.">
+            <figcaption>ROC curves for logistic regression (GLM), neural network and gradient boosting.</figcaption>
+          </figure>
+        </div>
+        <div class="card-body">
+          <h3>Genomes to Fields maize prediction</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Machine learning</span><span class="tag">Kaggle</span></div>
+          <p>For the Genomes to Fields (G2F) Kaggle challenge, I am building models to predict a binary hybrid-performance outcome from environmental and genetic features. I am comparing logistic regression, a neural network, gradient boosting and a random forest on an 80/20 train&ndash;test split, after target and one-hot encoding, correlation filtering and scaling.</p>
+          <p><strong>Results so far:</strong> Logistic regression did best (accuracy 0.81, AUC 0.88), followed by random forest (0.80, AUC 0.88), gradient boosting (0.79, AUC 0.88) and the neural network (0.74, AUC 0.82).</p>
+        </div>
+      </article>
+
+      <!-- Crop decision (in progress) -->
+      <article class="card">
+        <div class="card-body">
+          <h3>Crop decision support system</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Spatial data</span><span class="tag">Sequence mining</span></div>
+          <p><strong>Question:</strong> Can historical data predict the best crop for a field next year?</p>
+          <p><strong>Approach:</strong> This ongoing system combines rotation history, insurance risk, yields, prices and weather scenarios on 141,438 5&nbsp;km grid cells across the continental U.S. (2008&ndash;2024), covering six crops that make up 86% of U.S. cropland.</p>
+          <p><strong>Early results from the rotation analysis</strong> (first-order Markov chains and sequence mining):</p>
+          <ul>
+            <li>Corn&ndash;soybean is the most common transition (14.9% of all transitions).</li>
+            <li>Alfalfa is the most stable crop (84.7% stays the same year to year).</li>
+            <li>23% of grid cells grow the same crop all 17 years, and 71.5% rotate between only one or two crops.</li>
+            <li>Iowa and Illinois show the most active rotation.</li>
+          </ul>
+          <p class="note">Next steps: yield and risk models and a multi-objective crop optimizer. Results are preliminary.</p>
+        </div>
+      </article>
+
+      <!-- Canola -->
+      <article class="card wide">
+        <div class="card-body">
+          <h3>Mapping canola with satellite embeddings</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Satellite embeddings</span><span class="tag">Random forest</span></div>
+          <p><strong>Question:</strong> Can AI satellite embeddings identify canola fields?</p>
+          <p><strong>Approach:</strong> I extracted every canola pixel from the 30&nbsp;m USDA Cropland Data Layer for 2008&ndash;2024 (128.6 million pixel centroids) and sampled the 64-band AlphaEarth Foundations embeddings from Google DeepMind at those locations.</p>
+          <p><strong>Early results:</strong> In a 2024 proof of concept with 500 canola and 500 nearby other-crop pixels, a random forest reached 88.0% accuracy (ROC AUC 0.938) on a random split and 82.4% (AUC 0.894) on a stricter spatial split that holds out whole map blocks.</p>
+          <p class="note">This is a small pixel-level test, not validated field mapping.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS & PRESENTATIONS ============ -->
+<section id="publications">
+  <div class="wrap">
+    <h2>Publications &amp; presentations</h2>
+
+    <h3 class="sub">Publications <span class="muted" style="font-weight:400">(not peer-reviewed or abstracts in conference proceedings)</span></h3>
+    <ul class="list">
+      <li><div class="title">&ldquo;Wainwright Community &ndash; Permafrost Thaw Risk Assessment Project&rdquo;</div><div class="meta">IEEE International Conference on eScience (eScience), 2025</div></li>
+      <li><div class="title">&ldquo;Estimating Corn Phenology by Integrating Object-Oriented Remote Sensing and Machine Learning to Create Field Model Environmental Smog&rdquo;</div><div class="meta">The 5th International Electronic Conference on Remote Sensing, 2023</div></li>
+    </ul>
+
+    <h3 class="sub">Conference presentations</h3>
+    <ul class="list">
+      <li><div class="title">&ldquo;Prediction of Crop Insurance Loss Ratio Caused by Extreme Moisture and Drought&rdquo;</div><div class="meta">2026 AAG Annual Meeting &middot; Presentation</div></li>
+      <li><div class="title">&ldquo;Wainwright Community &ndash; Permafrost Thaw Risk Assessment Project&rdquo;</div><div class="meta">2025 21st IEEE International Conference on e-Science (eScience 2025) &middot; Poster presentation</div></li>
+      <li><div class="title">&ldquo;Spatial and Temporal Analysis of Crop Frequency and Insurance Losses to Predict Crop Losses Under Certain Climate Conditions&rdquo;</div><div class="meta">2025 AAG Annual Meeting &middot; Presentation</div></li>
+      <li><div class="title">&ldquo;Estimating Corn Phenology by Integrating Object-Oriented Remote Sensing and Machine Learning to Create Field Model&rdquo;</div><div class="meta">2023 AAG West Lakes Division Meeting &middot; Presentation</div></li>
+      <li><div class="title">&ldquo;Estimating Corn Phenology by Integrating Object-Oriented Remote Sensing and Machine Learning to Create Field Model&rdquo;</div><div class="meta">The 5th International Electronic Conference on Remote Sensing, 2023 &middot; Presentation</div></li>
+    </ul>
+
+    <h3 class="sub">Awards &amp; honors</h3>
+    <ul class="list">
+      <li><div class="title">Poster Award, 1st Place</div><div class="meta">Plant Science Symposium, 2026</div></li>
+      <li><div class="title">Applied Geography Specialty Group Annual Award</div><div class="meta">2025</div></li>
+      <li><div class="title">Master&rsquo;s Paper Presentation, 2nd Place</div><div class="meta">AAG West Lakes Division Meeting, 2023</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="timeline">
+
+      <div class="job">
+        <div class="when">Jan 2026 &ndash; Present</div>
+        <div>
+          <h3>Teaching Assistant</h3>
+          <div class="org">Informatics Department &amp; Crop Science Department, University of Illinois Urbana-Champaign</div>
+          <ul><li>See <a href="#teaching">Teaching</a> for the courses.</li></ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Aug 2024 &ndash; Dec 2025</div>
+        <div>
+          <h3>Graduate Research Assistant</h3>
+          <div class="org">Informatics Department, University of Illinois Urbana-Champaign</div>
+          <ul>
+            <li><strong>Resilient Agricultural Supply Chains Against Climate Hazards (RASCCH):</strong> analyzed crop insurance, yield and weather data to create mitigation scenarios for robust agricultural production.</li>
+            <li><strong>Permafrost Discovery Gateway:</strong> identified permafrost thaw risk areas for infrastructure and potential places for neighborhood extension.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">2019 &ndash; 2023</div>
+        <div>
+          <h3>Remote Sensing and GIS Specialist</h3>
+          <div class="org">Farmlabs &amp; Geosys &middot; Ankara, Turkey</div>
+          <ul>
+            <li>Processed time series satellite data and created zone maps for variable rate fertilization.</li>
+            <li>Conducted field work for ground truth and research improvement, and communicated with stakeholders.</li>
+            <li>Worked on parcel delineation, drought analysis and project proposals.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">2018 &ndash; 2019</div>
+        <div>
+          <h3>Research Intern</h3>
+          <div class="org">Geosys &middot; Ankara, Turkey</div>
+          <ul>
+            <li>Supported research tasks in remote sensing and geospatial data analysis.</li>
+            <li>Built an Urban Atlas.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <ul class="list">
+      <li><div class="title">PhD in Informatics (Spatial Informatics)</div><div class="meta">University of Illinois Urbana-Champaign &middot; 2029 (anticipated) &middot; GPA 4.0 &middot; Advisors: Elhan Ersoz and Nico Martin</div></li>
+      <li><div class="title">MS in Geodetic and Geographic Information Technologies (GGIT)</div><div class="meta">Middle East Technical University &middot; 2024</div></li>
+      <li><div class="title">BS in City and Regional Planning</div><div class="meta">Middle East Technical University &middot; 2019</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TEACHING ============ -->
+<section id="teaching">
+  <div class="wrap">
+    <h2>Teaching</h2>
+    <h3 class="sub">Teaching assistant, University of Illinois Urbana-Champaign</h3>
+    <ul class="list">
+      <li><div class="title">CPSC 442 &middot; Introduction to Programming with R</div><div class="meta">Fall 2026</div></li>
+      <li><div class="title">CPSC 444 &middot; Introduction to Spatial Analytics</div><div class="meta">Fall 2025, Fall 2026</div></li>
+      <li><div class="title">CPSC 440 &middot; Applied Statistics 1</div><div class="meta">Spring 2026</div></li>
+      <li><div class="title">CPSC 499 &middot; Soft Skills</div><div class="meta">Spring 2026</div></li>
+    </ul>
+
+    <h3 class="sub">Teaching material</h3>
+    <article class="card" style="margin-top:14px">
+      <div class="card-media">
+        <figure>
+          <img src="assets/soil-ec30-interpolation.png" width="790" height="383" loading="lazy" alt="Two maps of point soil electrical conductivity (EC30) measurements across a diamond-shaped field, interpolated with inverse distance weighting and with k-nearest neighbours (k=10).">
+          <figcaption>EC30 soil measurements for one field, interpolated with inverse distance weighting (left) and k-nearest neighbours, k=10 (right).</figcaption>
+        </figure>
+      </div>
+      <div class="card-body">
+        <h3>CPSC 444 exercise: soil depth &amp; soil property interpolation</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">Spatial interpolation</span></div>
+        <p>A case study for CPSC 444 that assembles point soil measurements for a field, such as apparent electrical conductivity (EC30) and hardpan depth, and interpolates them with inverse distance weighting and k-nearest neighbours in both Python and R. It is a teaching and data-assembly workflow.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <h2>Technical skills</h2>
+    <div class="skills">
+      <div class="skill"><h3>Programming languages</h3><div class="tags"><span class="tag">Python</span><span class="tag">R</span></div></div>
+      <div class="skill"><h3>Tools &amp; frameworks</h3><div class="tags"><span class="tag">Geoserver</span><span class="tag">ArcGIS</span><span class="tag">QGIS</span><span class="tag">Fusion360</span><span class="tag">Figma</span></div></div>
+      <div class="skill"><h3>Databases</h3><div class="tags"><span class="tag">SQL</span></div></div>
+      <div class="skill"><h3>Methods</h3><div class="tags"><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">Spatial Analysis</span><span class="tag">GeoAI</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CV ============ -->
+<section id="cv">
+  <div class="wrap">
+    <div class="cv-box">
+      <div><h3>Curriculum vitae</h3><p>Education, experience, publications, presentations and awards (PDF).</p></div>
+      <a class="btn" href="assets/Emine_Senkardesler_CV.pdf" download>Download CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <div>
+        <h3>Let&rsquo;s talk</h3>
+        <p>Informatics, University of Illinois Urbana-Champaign<br>
+        <a href="mailto:emine2@illinois.edu" style="color:inherit">emine2@illinois.edu</a></p>
+      </div>
+      <a class="btn" href="mailto:emine2@illinois.edu">Send an email</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="year">2026</span> Emine Senkardesler &middot; University of Illinois Urbana-Champaign</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
