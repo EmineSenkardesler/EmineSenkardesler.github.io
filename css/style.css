@@ -128,3 +128,7 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--muted);f
 .poster-links .muted{font-weight:400}
 #pres-nna-2026,#award-pss-2026{scroll-margin-top:90px}
 @media (prefers-reduced-motion:reduce){.poster-thumb img{transition:none}}
+.related{margin:4px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:.9rem;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;overflow-wrap:anywhere}
+.related-label{font-weight:600}
+.related-title{color:var(--muted,inherit)}
+.poster-links{flex-wrap:wrap}
