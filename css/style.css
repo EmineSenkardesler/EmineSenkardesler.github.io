@@ -74,7 +74,7 @@ section{padding:64px 0;border-top:1px solid var(--line)}
 .card-media:not(.two) img{max-height:520px}
 .card-media a{display:block;cursor:zoom-in}
 /* side figure: text on the left, framed figure on the right; stacks on small screens */
-.card.side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);align-items:start}
+.card.side{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);align-items:start}
 .card.side .card-media{order:2;background:none;border:0;padding:22px 24px 26px 0}
 .card.side .card-media figure{border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .card.side .card-media img{height:auto;max-height:none}
@@ -88,7 +88,8 @@ section{padding:64px 0;border-top:1px solid var(--line)}
 .card ul{margin:0;padding-left:1.1rem;font-size:.96rem}
 .card li{margin:.2rem 0}
 .note{font-size:.85rem;color:var(--muted)}
-@media (max-width:860px){.cards{grid-template-columns:1fr}.card-media.two{grid-template-columns:1fr}.card.side{display:flex}.card.side .card-media{order:0;padding:22px 24px 0}}
+@media (max-width:860px){.cards{grid-template-columns:1fr}.card-media.two{grid-template-columns:1fr}}
+@media (max-width:600px){.card.side{display:flex}.card.side .card-media{order:0;padding:22px 24px 0}}
 
 /* zoom view for figures (a[data-zoom]) */
 .zoom{position:fixed;inset:0;z-index:200;background:rgba(10,14,22,.92);display:flex;align-items:center;justify-content:center;padding:56px 24px 48px;overflow:auto;cursor:zoom-out}
