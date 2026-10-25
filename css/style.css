@@ -72,6 +72,8 @@ section{padding:64px 0;border-top:1px solid var(--line)}
 .card-media figure{margin:0;background:#fff;display:flex;flex-direction:column}
 .card-media img{width:100%;height:100%;object-fit:contain;background:#fff;max-height:340px}
 .card-media:not(.two) img{max-height:520px}
+.card-media.large img{max-height:880px}
+.card-media a{display:block;cursor:zoom-in}
 .card-media figcaption{font-size:.78rem;color:#4b5263;padding:6px 12px;background:#f5f6f8;text-align:center}
 .card-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px}
 .card-body p{margin:0;font-size:.98rem}
