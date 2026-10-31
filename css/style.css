@@ -64,15 +64,15 @@ section{padding:64px 0;border-top:1px solid var(--line)}
   width:116%;
   height:116%;
   background-color:#13294b;
-  -webkit-mask-image:url("../assets/hero-topo.svg");
-  mask-image:url("../assets/hero-topo.svg");
+  -webkit-mask-image:url("../assets/hero-topo.svg?v=20261030c2");
+  mask-image:url("../assets/hero-topo.svg?v=20261030c2");
   -webkit-mask-repeat:no-repeat;
   mask-repeat:no-repeat;
   -webkit-mask-position:center 40%;
   mask-position:center 40%;
   -webkit-mask-size:cover;
   mask-size:cover;
-  opacity:0.10;
+  opacity:0.17;
   will-change:transform;
   animation:hero-drift 96s linear infinite alternate;
 }
@@ -83,14 +83,14 @@ section{padding:64px 0;border-top:1px solid var(--line)}
   inset:0;
   background:
     linear-gradient(100deg,
-      color-mix(in srgb,var(--bg) 92%,transparent) 0%,
-      color-mix(in srgb,var(--bg) 78%,transparent) 38%,
-      color-mix(in srgb,var(--bg) 42%,transparent) 68%,
-      color-mix(in srgb,var(--bg) 28%,transparent) 100%),
+      color-mix(in srgb,var(--bg) 62%,transparent) 0%,
+      color-mix(in srgb,var(--bg) 40%,transparent) 38%,
+      color-mix(in srgb,var(--bg) 18%,transparent) 68%,
+      color-mix(in srgb,var(--bg) 8%,transparent) 100%),
     linear-gradient(180deg,
-      color-mix(in srgb,var(--bg) 35%,transparent) 0%,
-      transparent 40%,
-      color-mix(in srgb,var(--bg) 45%,transparent) 100%),
+      color-mix(in srgb,var(--bg) 18%,transparent) 0%,
+      transparent 45%,
+      color-mix(in srgb,var(--bg) 26%,transparent) 100%),
     radial-gradient(900px 400px at 85% -10%,var(--accent-soft),transparent 70%);
 }
 .hero > .wrap{position:relative;z-index:1}
@@ -101,19 +101,19 @@ section{padding:64px 0;border-top:1px solid var(--line)}
 @media (prefers-color-scheme:dark){
   .hero-bg-pattern{
     background-color:#8fb4ee;
-    opacity:0.18;
+    opacity:0.20;
   }
   .hero-bg::after{
     background:
       linear-gradient(100deg,
-        color-mix(in srgb,var(--bg) 90%,transparent) 0%,
-        color-mix(in srgb,var(--bg) 72%,transparent) 38%,
-        color-mix(in srgb,var(--bg) 40%,transparent) 68%,
-        color-mix(in srgb,var(--bg) 22%,transparent) 100%),
+        color-mix(in srgb,var(--bg) 82%,transparent) 0%,
+        color-mix(in srgb,var(--bg) 62%,transparent) 38%,
+        color-mix(in srgb,var(--bg) 32%,transparent) 68%,
+        color-mix(in srgb,var(--bg) 16%,transparent) 100%),
       linear-gradient(180deg,
-        color-mix(in srgb,var(--bg) 30%,transparent) 0%,
+        color-mix(in srgb,var(--bg) 24%,transparent) 0%,
         transparent 42%,
-        color-mix(in srgb,var(--bg) 40%,transparent) 100%),
+        color-mix(in srgb,var(--bg) 34%,transparent) 100%),
       radial-gradient(900px 400px at 85% -10%,var(--accent-soft),transparent 70%);
   }
 }
@@ -141,23 +141,23 @@ section{padding:64px 0;border-top:1px solid var(--line)}
   .hero-bg::after{
     background:
       linear-gradient(180deg,
-        color-mix(in srgb,var(--bg) 70%,transparent) 0%,
-        color-mix(in srgb,var(--bg) 40%,transparent) 45%,
-        color-mix(in srgb,var(--bg) 62%,transparent) 100%),
+        color-mix(in srgb,var(--bg) 45%,transparent) 0%,
+        color-mix(in srgb,var(--bg) 20%,transparent) 45%,
+        color-mix(in srgb,var(--bg) 38%,transparent) 100%),
       radial-gradient(900px 400px at 85% -10%,var(--accent-soft),transparent 70%);
   }
-  .hero-bg-pattern{opacity:0.12}
+  .hero-bg-pattern{opacity:0.17}
 }
 @media (max-width:860px) and (prefers-color-scheme:dark){
   .hero-bg::after{
     background:
       linear-gradient(180deg,
-        color-mix(in srgb,var(--bg) 68%,transparent) 0%,
-        color-mix(in srgb,var(--bg) 38%,transparent) 45%,
-        color-mix(in srgb,var(--bg) 60%,transparent) 100%),
+        color-mix(in srgb,var(--bg) 58%,transparent) 0%,
+        color-mix(in srgb,var(--bg) 30%,transparent) 45%,
+        color-mix(in srgb,var(--bg) 50%,transparent) 100%),
       radial-gradient(900px 400px at 85% -10%,var(--accent-soft),transparent 70%);
   }
-  .hero-bg-pattern{opacity:0.20}
+  .hero-bg-pattern{opacity:0.21}
 }
 
 /* interests */
