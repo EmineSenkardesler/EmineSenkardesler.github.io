@@ -178,17 +178,48 @@ section{padding:64px 0;border-top:1px solid var(--line)}
   .card{transition:none}
   .card:hover{transform:none}
 }
-.card-visual{margin:0;border-bottom:1px solid var(--line);background:var(--accent-soft);aspect-ratio:16/9;overflow:hidden}
-.card-visual img{width:100%;height:100%;object-fit:cover;display:block}
+/* image + write-up live in the same card; stacked on small screens */
+.card-visual{margin:0;border-bottom:1px solid var(--line);background:var(--accent-soft);aspect-ratio:16/9;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:14px;box-sizing:border-box}
+.card-visual img,
+.card-visual .card-anim,
+.card-visual .card-anim-still{width:100%;height:100%;object-fit:contain;display:block;border-radius:10px}
+.card-visual .card-anim{height:100%}
+.card-visual .card-anim img{width:100%;height:100%;object-fit:contain;display:block;border-radius:10px}
 .card-visual-contain{background:var(--surface)}
-.card-visual-contain img{object-fit:contain}
 .card-visual-anim{position:relative}
-.card-visual .card-anim, .card-visual .card-anim-still{width:100%;height:100%;object-fit:cover;display:block}
-.card-visual .card-anim img{width:100%;height:100%;object-fit:cover;display:block}
 .card-anim-still{display:none}
 @media (prefers-reduced-motion:reduce){
   .card-visual-anim .card-anim{display:none}
   .card-visual-anim .card-anim-still{display:block}
+}
+/* desktop: side-by-side image (~40%) + text inside one card */
+@media (min-width:900px){
+  .card:has(> .card-visual){
+    grid-column:1/-1;
+    display:grid;
+    grid-template-columns:minmax(240px,.4fr) minmax(0,.6fr);
+    align-items:center;
+  }
+  .card:has(> .card-visual) > .card-visual{
+    aspect-ratio:auto;
+    align-self:stretch;
+    border-bottom:none;
+    border-right:1px solid var(--line);
+    min-height:220px;
+    max-height:none;
+    padding:20px;
+  }
+  .card:has(> .card-visual) > .card-visual img,
+  .card:has(> .card-visual) > .card-visual .card-anim,
+  .card:has(> .card-visual) > .card-visual .card-anim-still,
+  .card:has(> .card-visual) > .card-visual .card-anim img{
+    max-height:min(480px,70vh);
+    width:100%;
+    height:auto;
+    max-width:100%;
+    object-fit:contain;
+  }
+  .card:has(> .card-visual) > .card-body{padding:26px 28px 28px}
 }
 
 .card-media{display:grid;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
@@ -256,3 +287,10 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--muted);f
 .related-label{font-weight:600}
 .related-title{color:var(--muted,inherit)}
 .poster-links{flex-wrap:wrap}
+
+
+/* hackathons (text-only cards) */
+.hackathon-cards{grid-template-columns:repeat(2,1fr)}
+.hackathon-card .card-body{padding-top:24px}
+.hackathon-card .meta{margin:0;color:var(--muted);font-size:.9rem}
+@media (max-width:860px){.hackathon-cards{grid-template-columns:1fr}}
