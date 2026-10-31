@@ -168,8 +168,18 @@ section{padding:64px 0;border-top:1px solid var(--line)}
 
 /* projects */
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .22s ease, box-shadow .22s ease}
 .card.wide{grid-column:1/-1}
+.card:hover{transform:translateY(-3px);box-shadow:0 4px 10px rgba(19,41,75,.08),0 16px 36px rgba(19,41,75,.10)}
+@media (prefers-color-scheme:dark){
+  .card:hover{box-shadow:0 4px 10px rgba(0,0,0,.35),0 16px 36px rgba(0,0,0,.35)}
+}
+@media (prefers-reduced-motion:reduce){
+  .card{transition:none}
+  .card:hover{transform:none}
+}
+.card-visual{margin:0;border-bottom:1px solid var(--line);background:var(--accent-soft);aspect-ratio:16/9;overflow:hidden}
+.card-visual img{width:100%;height:100%;object-fit:cover;display:block}
 .card-media{display:grid;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
 .card-media.two{grid-template-columns:1fr 1fr}
 .card-media figure{margin:0;background:#fff;display:flex;flex-direction:column}
