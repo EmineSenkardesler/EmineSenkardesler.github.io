@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#13294b">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313294b'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23ffffff'%3EES%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="css/style.css?v=20261030d">
+<link rel="stylesheet" href="css/style.css?v=20261030e">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -117,8 +117,12 @@
 
       <!-- Crop insurance -->
       <article class="card wide" id="project-insurance">
-        <div class="card-visual">
-          <img src="assets/projects/insurance.svg" alt="Abstract county-grid mosaic suggesting spatial patterns of crop-insurance risk across the Corn Belt" width="800" height="450" loading="lazy" decoding="async">
+        <div class="card-visual card-visual-anim">
+          <picture class="card-anim">
+            <source srcset="assets/projects/illinois-drought.webp" type="image/webp">
+            <img src="assets/projects/illinois-drought.gif" width="960" height="764" loading="lazy" decoding="async" alt="Animated map of the 2012 drought across the contiguous U.S., shown with the monthly SPEI drought index from March through September">
+          </picture>
+          <img class="card-anim-still" src="assets/projects/illinois-drought-still.webp" width="960" height="764" loading="lazy" decoding="async" alt="Map of June 2012 drought conditions across the contiguous U.S., shown with the SPEI drought index">
         </div>
         <div class="card-body">
           <h3>Crop insurance losses in the U.S. Corn Belt</h3>
@@ -132,8 +136,8 @@
 
       <!-- Supply chains -->
       <article class="card wide" id="project-supply">
-        <div class="card-visual">
-          <img src="assets/projects/supply.svg" alt="Abstract network of nodes and arcs suggesting interstate grain-trade flows" width="800" height="450" loading="lazy" decoding="async">
+        <div class="card-visual card-visual-contain">
+          <img src="assets/projects/supply-flow-heatmap.webp" width="1100" height="943" loading="lazy" decoding="async" alt="Heat map of mean annual cereal-grain shipments between the 48 contiguous U.S. states, with origin states on the horizontal axis and destination states on the vertical axis, grouped into the nine NOAA climate regions. Darker blue cells mark larger flows; the darkest cells lie along the diagonal (shipments within a state).">
         </div>
         <div class="card-body">
           <h3>Supply chains: interstate cereal-grain trade under weather shocks</h3>
