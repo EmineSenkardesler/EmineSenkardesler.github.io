@@ -181,16 +181,19 @@ section{padding:64px 0;border-top:1px solid var(--line)}
 /* image + write-up live in the same card; stacked on small screens */
 .card-visual{margin:0;border-bottom:1px solid var(--line);background:var(--accent-soft);aspect-ratio:16/9;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:14px;box-sizing:border-box}
 .card-visual img,
-.card-visual .card-anim,
-.card-visual .card-anim-still{width:100%;height:100%;object-fit:contain;display:block;border-radius:10px}
+.card-visual .card-anim{width:100%;height:100%;object-fit:contain;display:block;border-radius:10px}
 .card-visual .card-anim{height:100%}
 .card-visual .card-anim img{width:100%;height:100%;object-fit:contain;display:block;border-radius:10px}
 .card-visual-contain{background:var(--surface)}
+
+
+/* Animation default = GIF/img.card-anim; still only under prefers-reduced-motion (no JS). */
 .card-visual-anim{position:relative}
-.card-anim-still{display:none}
+.card-visual-anim .card-anim{display:block;width:100%;height:100%;object-fit:contain;border-radius:10px}
+.card-visual-anim .card-anim-still{display:none;width:100%;height:100%;object-fit:contain;border-radius:10px}
 @media (prefers-reduced-motion:reduce){
-  .card-visual-anim .card-anim{display:none}
-  .card-visual-anim .card-anim-still{display:block}
+  .card-visual-anim .card-anim{display:none !important}
+  .card-visual-anim .card-anim-still{display:block !important}
 }
 /* desktop: side-by-side image (~40%) + text inside one card */
 @media (min-width:900px){

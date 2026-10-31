@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#13294b">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313294b'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23ffffff'%3EES%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="css/style.css?v=20261031b">
+<link rel="stylesheet" href="css/style.css?v=20261031c">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -103,8 +103,8 @@
 
       <!-- Permafrost -->
       <article class="card wide" id="project-permafrost">
-        <div class="card-visual">
-          <img src="assets/projects/permafrost.svg" alt="Abstract schematic of an Arctic coastline with nested contour rings and a coastal settlement grid" width="800" height="450" loading="lazy" decoding="async">
+        <div class="card-visual card-visual-contain">
+          <img src="assets/projects/permafrost-risk.webp" alt="Wainwright, Alaska permafrost hazard map on a 50 m grid over satellite imagery: green to red hazard classes, cyan outlines of existing infrastructure, and black outlines of no-go cells" width="800" height="1000" loading="lazy" decoding="async">
         </div>
         <div class="card-body">
           <h3>Permafrost thaw risk to infrastructure in Wainwright, Alaska</h3>
@@ -118,8 +118,8 @@
 
       <!-- Crop insurance -->
       <article class="card wide" id="project-insurance">
-        <div class="card-visual">
-          <img src="assets/projects/insurance.svg" alt="Abstract county grid with scattered loss markers suggesting crop-insurance risk mapping" width="800" height="450" loading="lazy" decoding="async">
+        <div class="card-visual card-visual-contain">
+          <img src="assets/projects/insurance-loss-ratio.webp" alt="Corn Belt county choropleth titled Loss Ratio Landscape showing median corn insurance loss ratio for drought and excess moisture, with a numeric legend from 0.00 to 3.82" width="1000" height="671" loading="lazy" decoding="async">
         </div>
         <div class="card-body">
           <h3>Crop insurance losses in the U.S. Corn Belt</h3>
@@ -148,11 +148,8 @@
       <!-- Rotation -->
       <article class="card wide" id="project-rotation">
         <div class="card-visual card-visual-anim">
-          <picture class="card-anim">
-            <source srcset="assets/projects/rotation-corn.webp" type="image/webp">
-            <img src="assets/projects/rotation-corn.gif" width="720" height="809" loading="lazy" decoding="async" alt="Animated map of Illinois stepping through 2008 to 2024, showing the share of each grid cell planted to corn">
-          </picture>
-          <img class="card-anim-still" src="assets/projects/rotation-corn-still.webp" width="720" height="809" loading="lazy" decoding="async" alt="Map of Illinois corn planting share in 2008">
+          <img class="card-anim" src="assets/projects/rotation-corn.gif" width="480" height="539" loading="lazy" decoding="async" alt="Animated map of Illinois stepping through 2008 to 2024, showing the share of each grid cell planted to corn">
+          <img class="card-anim-still" src="assets/projects/rotation-corn-still.webp" width="480" height="539" loading="lazy" decoding="async" alt="Map of Illinois corn planting share in 2008">
         </div>
         <div class="card-body">
           <h3>Crop rotation patterns in the U.S. Corn Belt</h3>
@@ -189,21 +186,6 @@
             <li>Iowa and Illinois show the most active rotation.</li>
           </ul>
           <p class="note">Next steps: yield and risk models and a multi-objective crop optimizer. Results are preliminary.</p>
-        </div>
-      </article>
-
-      <!-- Canola -->
-      <article class="card wide" id="project-canola">
-        <div class="card-visual">
-          <img src="assets/projects/canola.svg" alt="Abstract striped field parcels under a satellite swath for canola mapping" width="800" height="450" loading="lazy" decoding="async">
-        </div>
-        <div class="card-body">
-          <h3>Mapping canola with satellite embeddings</h3>
-          <div class="tags"><span class="tag status">In progress</span><span class="tag">Satellite embeddings</span><span class="tag">Random forest</span></div>
-          <p><strong>Question:</strong> Can AI satellite embeddings identify canola fields?</p>
-          <p><strong>Approach:</strong> I extracted every canola pixel from the 30&nbsp;m USDA Cropland Data Layer for 2008&ndash;2024 (128.6 million pixel centroids) and sampled the 64-band AlphaEarth Foundations embeddings from Google DeepMind at those locations.</p>
-          <p><strong>Early results:</strong> In a 2024 proof of concept with 500 canola and 500 nearby other-crop pixels, a random forest reached 88.0% accuracy (ROC AUC 0.938) on a random split and 82.4% (AUC 0.894) on a stricter spatial split that holds out whole map blocks.</p>
-          <p class="note">This is a small pixel-level test, not validated field mapping.</p>
         </div>
       </article>
 
