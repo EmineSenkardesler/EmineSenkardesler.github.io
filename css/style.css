@@ -64,15 +64,15 @@ section{padding:64px 0;border-top:1px solid var(--line)}
   width:116%;
   height:116%;
   background-color:#13294b;
-  -webkit-mask-image:url("../assets/hero-topo.svg?v=20261030c");
-  mask-image:url("../assets/hero-topo.svg?v=20261030c");
+  -webkit-mask-image:url("../assets/hero-topo.svg?v=20261030c2");
+  mask-image:url("../assets/hero-topo.svg?v=20261030c2");
   -webkit-mask-repeat:no-repeat;
   mask-repeat:no-repeat;
   -webkit-mask-position:center 40%;
   mask-position:center 40%;
   -webkit-mask-size:cover;
   mask-size:cover;
-  opacity:0.26;
+  opacity:0.17;
   will-change:transform;
   animation:hero-drift 96s linear infinite alternate;
 }
@@ -101,7 +101,7 @@ section{padding:64px 0;border-top:1px solid var(--line)}
 @media (prefers-color-scheme:dark){
   .hero-bg-pattern{
     background-color:#8fb4ee;
-    opacity:0.22;
+    opacity:0.20;
   }
   .hero-bg::after{
     background:
@@ -146,7 +146,7 @@ section{padding:64px 0;border-top:1px solid var(--line)}
         color-mix(in srgb,var(--bg) 38%,transparent) 100%),
       radial-gradient(900px 400px at 85% -10%,var(--accent-soft),transparent 70%);
   }
-  .hero-bg-pattern{opacity:0.26}
+  .hero-bg-pattern{opacity:0.17}
 }
 @media (max-width:860px) and (prefers-color-scheme:dark){
   .hero-bg::after{
@@ -157,7 +157,7 @@ section{padding:64px 0;border-top:1px solid var(--line)}
         color-mix(in srgb,var(--bg) 50%,transparent) 100%),
       radial-gradient(900px 400px at 85% -10%,var(--accent-soft),transparent 70%);
   }
-  .hero-bg-pattern{opacity:0.24}
+  .hero-bg-pattern{opacity:0.21}
 }
 
 /* interests */
