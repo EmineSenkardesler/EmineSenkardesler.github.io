@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img">
+<title>Abstract coastal contour map for a permafrost study area</title>
+<style>
+  .bg { fill: #eef2f9; }
+  .ink { stroke: #13294b; fill: none; }
+  .fill { fill: #13294b; }
+  .soft { stroke: #13294b; fill: none; opacity: 0.35; }
+  .accent { stroke: #e84a27; fill: none; }
+  .accent-fill { fill: #e84a27; }
+  .teal { stroke: #2a6f7a; fill: none; }
+  .teal-fill { fill: #2a6f7a; opacity: 0.18; }
+  .band { fill: #13294b; opacity: 0.08; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #1a2436; }
+    .ink { stroke: #8fb4ee; }
+    .fill { fill: #8fb4ee; }
+    .soft { stroke: #8fb4ee; }
+    .accent { stroke: #ff7a59; }
+    .accent-fill { fill: #ff7a59; }
+    .teal { stroke: #7ec8d0; }
+    .teal-fill { fill: #7ec8d0; opacity: 0.22; }
+    .band { fill: #8fb4ee; opacity: 0.10; }
+  }
+</style>
+<rect class="bg" width="800" height="450"/>
+
+  <!-- schematic Arctic coast -->
+  <path class="ink" stroke-width="2.2" stroke-linecap="round" d="M40 300 C120 260,180 320,260 280 C340 240,400 300,480 270 C560 240,620 200,760 190"/>
+  <path class="soft" stroke-width="1.4" d="M40 318 C130 280,190 340,270 300 C350 260,410 320,490 292 C570 264,630 220,760 210"/>
+  <!-- nested contour rings (thaw terrain) -->
+  <ellipse class="ink" stroke-width="1.6" cx="280" cy="170" rx="110" ry="70"/>
+  <ellipse class="ink" stroke-width="1.4" cx="280" cy="170" rx="78" ry="48"/>
+  <ellipse class="ink" stroke-width="1.2" cx="280" cy="170" rx="46" ry="28"/>
+  <ellipse class="ink" stroke-width="1.6" cx="540" cy="150" rx="90" ry="58"/>
+  <ellipse class="ink" stroke-width="1.3" cx="540" cy="150" rx="58" ry="36"/>
+  <ellipse class="ink" stroke-width="1.1" cx="540" cy="150" rx="28" ry="16"/>
+  <!-- grid cells -->
+  <g class="soft" stroke-width="0.8">
+    <rect x="60" y="320" width="30" height="22" rx="2"/>
+    <rect x="60" y="348" width="30" height="22" rx="2"/>
+    <rect x="60" y="376" width="30" height="22" rx="2"/>
+    <rect x="60" y="404" width="30" height="22" rx="2"/>
+    <rect x="96" y="320" width="30" height="22" rx="2"/>
+    <rect x="96" y="348" width="30" height="22" rx="2"/>
+    <rect x="96" y="376" width="30" height="22" rx="2"/>
+    <rect x="96" y="404" width="30" height="22" rx="2"/>
+    <rect x="132" y="320" width="30" height="22" rx="2"/>
+    <rect x="132" y="348" width="30" height="22" rx="2"/>
+    <rect x="132" y="376" width="30" height="22" rx="2"/>
+    <rect x="132" y="404" width="30" height="22" rx="2"/>
+    <rect x="168" y="320" width="30" height="22" rx="2"/>
+    <rect x="168" y="348" width="30" height="22" rx="2"/>
+    <rect x="168" y="376" width="30" height="22" rx="2"/>
+    <rect x="168" y="404" width="30" height="22" rx="2"/>
+    <rect x="204" y="320" width="30" height="22" rx="2"/>
+    <rect x="204" y="348" width="30" height="22" rx="2"/>
+    <rect x="204" y="376" width="30" height="22" rx="2"/>
+    <rect x="204" y="404" width="30" height="22" rx="2"/>
+    <rect x="240" y="320" width="30" height="22" rx="2"/>
+    <rect x="240" y="348" width="30" height="22" rx="2"/>
+    <rect x="240" y="376" width="30" height="22" rx="2"/>
+    <rect x="240" y="404" width="30" height="22" rx="2"/>
+    <rect x="276" y="320" width="30" height="22" rx="2"/>
+    <rect x="276" y="348" width="30" height="22" rx="2"/>
+    <rect x="276" y="376" width="30" height="22" rx="2"/>
+    <rect x="276" y="404" width="30" height="22" rx="2"/>
+    <rect x="312" y="320" width="30" height="22" rx="2"/>
+    <rect x="312" y="348" width="30" height="22" rx="2"/>
+    <rect x="312" y="376" width="30" height="22" rx="2"/>
+    <rect x="312" y="404" width="30" height="22" rx="2"/>
+    <rect x="348" y="320" width="30" height="22" rx="2"/>
+    <rect x="348" y="348" width="30" height="22" rx="2"/>
+    <rect x="348" y="376" width="30" height="22" rx="2"/>
+    <rect x="348" y="404" width="30" height="22" rx="2"/>
+    <rect x="384" y="320" width="30" height="22" rx="2"/>
+    <rect x="384" y="348" width="30" height="22" rx="2"/>
+    <rect x="384" y="376" width="30" height="22" rx="2"/>
+    <rect x="384" y="404" width="30" height="22" rx="2"/>
+    <rect x="420" y="320" width="30" height="22" rx="2"/>
+    <rect x="420" y="348" width="30" height="22" rx="2"/>
+    <rect x="420" y="376" width="30" height="22" rx="2"/>
+    <rect x="420" y="404" width="30" height="22" rx="2"/>
+    <rect x="456" y="320" width="30" height="22" rx="2"/>
+    <rect x="456" y="348" width="30" height="22" rx="2"/>
+    <rect x="456" y="376" width="30" height="22" rx="2"/>
+    <rect x="456" y="404" width="30" height="22" rx="2"/>
+    <rect x="492" y="320" width="30" height="22" rx="2"/>
+    <rect x="492" y="348" width="30" height="22" rx="2"/>
+    <rect x="492" y="376" width="30" height="22" rx="2"/>
+    <rect x="492" y="404" width="30" height="22" rx="2"/>
+    <rect x="528" y="320" width="30" height="22" rx="2"/>
+    <rect x="528" y="348" width="30" height="22" rx="2"/>
+    <rect x="528" y="376" width="30" height="22" rx="2"/>
+    <rect x="528" y="404" width="30" height="22" rx="2"/>
+    <rect x="564" y="320" width="30" height="22" rx="2"/>
+    <rect x="564" y="348" width="30" height="22" rx="2"/>
+    <rect x="564" y="376" width="30" height="22" rx="2"/>
+    <rect x="564" y="404" width="30" height="22" rx="2"/>
+    <rect x="600" y="320" width="30" height="22" rx="2"/>
+    <rect x="600" y="348" width="30" height="22" rx="2"/>
+    <rect x="600" y="376" width="30" height="22" rx="2"/>
+    <rect x="600" y="404" width="30" height="22" rx="2"/>
+    <rect x="636" y="320" width="30" height="22" rx="2"/>
+    <rect x="636" y="348" width="30" height="22" rx="2"/>
+    <rect x="636" y="376" width="30" height="22" rx="2"/>
+    <rect x="636" y="404" width="30" height="22" rx="2"/>
+    <rect x="672" y="320" width="30" height="22" rx="2"/>
+    <rect x="672" y="348" width="30" height="22" rx="2"/>
+    <rect x="672" y="376" width="30" height="22" rx="2"/>
+    <rect x="672" y="404" width="30" height="22" rx="2"/>
+    <rect x="708" y="320" width="30" height="22" rx="2"/>
+    <rect x="708" y="348" width="30" height="22" rx="2"/>
+    <rect x="708" y="376" width="30" height="22" rx="2"/>
+    <rect x="708" y="404" width="30" height="22" rx="2"/>
+  </g>
+  <!-- building dots -->
+  <g class="accent-fill">
+    <circle cx="210" cy="340" r="3.5"/><circle cx="250" cy="355" r="3.5"/>
+    <circle cx="290" cy="338" r="3.5"/><circle cx="330" cy="360" r="3.5"/>
+    <circle cx="380" cy="348" r="3.5"/><circle cx="430" cy="365" r="3.5"/>
+  </g>
+
+</svg>
