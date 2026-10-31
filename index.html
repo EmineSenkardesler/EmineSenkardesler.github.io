@@ -11,8 +11,7 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#13294b">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313294b'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23ffffff'%3EES%3C/text%3E%3C/svg%3E">
-<!-- Bump ?v= on the CSS and JS links whenever those files change, so browsers fetch the new version. -->
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=20261030a">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -41,6 +40,9 @@
 
 <!-- ============ HERO / ABOUT ============ -->
 <section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-pattern"></div>
+  </div>
   <div class="wrap">
     <div class="hero-grid">
       <div>
@@ -123,13 +125,7 @@
       </article>
 
       <!-- Supply chains -->
-      <article class="card wide side">
-        <div class="card-media">
-          <figure>
-            <a href="assets/supply-chain-flow-matrix-climate-regions.png" data-zoom><img src="assets/supply-chain-flow-matrix-climate-regions.png" width="2000" height="1715" loading="lazy" alt="Heat map of mean annual cereal-grain shipments between the 48 contiguous U.S. states, with origin states on the horizontal axis and destination states on the vertical axis, grouped into the nine NOAA climate regions. Darker blue cells mark larger flows; the darkest cells lie along the diagonal (shipments within a state)."></a>
-            <figcaption>Interstate cereal-grain flows grouped by NOAA climate region (Freight Analysis Framework, mean of 2002, 2007, 2012, 2017 and 2022). Click to zoom.</figcaption>
-          </figure>
-        </div>
+      <article class="card wide">
         <div class="card-body">
           <h3>Supply chains: interstate cereal-grain trade under weather shocks</h3>
           <div class="tags"><span class="tag status">In progress</span><span class="tag">Gravity model</span><span class="tag">Supply chains</span><span class="tag">Drought indices</span></div>
@@ -140,12 +136,8 @@
       </article>
 
       <!-- Rotation -->
-      <article class="card wide side">
+      <article class="card wide">
         <div class="card-media">
-          <figure>
-            <a href="assets/illinois-corn-2008-2024.webp" data-zoom><img src="assets/illinois-corn-2008-2024.webp" width="1067" height="1200" loading="lazy" alt="Animated map of Illinois stepping through the years 2008 to 2024, showing the share of each 5 km grid cell planted to corn, colored by percentile class. The highest corn shares sit in central and northern Illinois and the lowest in the south."></a>
-            <figcaption>Corn share of each 5&nbsp;km grid cell in Illinois, 2008&ndash;2024, by percentile class (USDA Cropland Data Layer). Click to zoom.</figcaption>
-          </figure>
         </div>
         <div class="card-body">
           <h3>Crop rotation patterns in the U.S. Corn Belt</h3>
@@ -160,6 +152,48 @@
             <li>Corn following soybeans appears to have lower insurance loss ratios than continuous corn.</li>
             <li>K-means clustering points to four distinct rotation regions.</li>
           </ul>
+        </div>
+      </article>
+
+      <!-- G2F -->
+      <article class="card">
+        <div class="card-media">
+        </div>
+        <div class="card-body">
+          <h3>Genomes to Fields maize prediction</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Machine learning</span><span class="tag">Kaggle</span></div>
+          <p>For the Genomes to Fields (G2F) Kaggle challenge, I am building models to predict a binary hybrid-performance outcome from environmental and genetic features. I am comparing logistic regression, a neural network, gradient boosting and a random forest on an 80/20 train&ndash;test split, after target and one-hot encoding, correlation filtering and scaling.</p>
+          <p><strong>Results so far:</strong> Logistic regression did best (accuracy 0.81, AUC 0.88), followed by random forest (0.80, AUC 0.88), gradient boosting (0.79, AUC 0.88) and the neural network (0.74, AUC 0.82).</p>
+        </div>
+      </article>
+
+      <!-- Crop decision (in progress) -->
+      <article class="card">
+        <div class="card-body">
+          <h3>Crop decision support system</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Spatial data</span><span class="tag">Sequence mining</span></div>
+          <p><strong>Question:</strong> Can historical data predict the best crop for a field next year?</p>
+          <p><strong>Approach:</strong> This ongoing system combines rotation history, insurance risk, yields, prices and weather scenarios on 141,438 5&nbsp;km grid cells across the continental U.S. (2008&ndash;2024), covering six crops that make up 86% of U.S. cropland.</p>
+          <p><strong>Early results from the rotation analysis</strong> (first-order Markov chains and sequence mining):</p>
+          <ul>
+            <li>Corn&ndash;soybean is the most common transition (14.9% of all transitions).</li>
+            <li>Alfalfa is the most stable crop (84.7% stays the same year to year).</li>
+            <li>23% of grid cells grow the same crop all 17 years, and 71.5% rotate between only one or two crops.</li>
+            <li>Iowa and Illinois show the most active rotation.</li>
+          </ul>
+          <p class="note">Next steps: yield and risk models and a multi-objective crop optimizer. Results are preliminary.</p>
+        </div>
+      </article>
+
+      <!-- Canola -->
+      <article class="card wide">
+        <div class="card-body">
+          <h3>Mapping canola with satellite embeddings</h3>
+          <div class="tags"><span class="tag status">In progress</span><span class="tag">Satellite embeddings</span><span class="tag">Random forest</span></div>
+          <p><strong>Question:</strong> Can AI satellite embeddings identify canola fields?</p>
+          <p><strong>Approach:</strong> I extracted every canola pixel from the 30&nbsp;m USDA Cropland Data Layer for 2008&ndash;2024 (128.6 million pixel centroids) and sampled the 64-band AlphaEarth Foundations embeddings from Google DeepMind at those locations.</p>
+          <p><strong>Early results:</strong> In a 2024 proof of concept with 500 canola and 500 nearby other-crop pixels, a random forest reached 88.0% accuracy (ROC AUC 0.938) on a random split and 82.4% (AUC 0.894) on a stricter spatial split that holds out whole map blocks.</p>
+          <p class="note">This is a small pixel-level test, not validated field mapping.</p>
         </div>
       </article>
 
@@ -360,6 +394,6 @@
   <div class="wrap">&copy; <span id="year">2026</span> Emine Senkardesler &middot; University of Illinois Urbana-Champaign</div>
 </footer>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
