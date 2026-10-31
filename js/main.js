@@ -1,5 +1,8 @@
-// Minimal JS: mobile menu, footer year, figure zoom view.
+// Minimal JS: mobile menu, footer year, timeline scroll fade-in.
 (function () {
+  var docEl = document.documentElement;
+  docEl.classList.add('js');
+
   var toggle = document.querySelector('.nav-toggle');
   var menu = document.getElementById('menu');
   if (toggle && menu) {
@@ -8,53 +11,81 @@
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     menu.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') { menu.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+      if (e.target.tagName === 'A') {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // Zoom view: links with data-zoom open their image full screen; clicking the image toggles full size.
-  var zoomLinks = document.querySelectorAll('a[data-zoom]');
-  if (zoomLinks.length) {
-    var box = document.createElement('div');
-    box.className = 'zoom';
-    box.hidden = true;
-    box.setAttribute('role', 'dialog');
-    box.setAttribute('aria-modal', 'true');
-    box.setAttribute('aria-label', 'Zoomed figure');
-    box.innerHTML = '<button class="zoom-close" type="button" aria-label="Close">&times;</button><img alt=""><p class="zoom-hint">Click the image for full size &middot; Esc or click outside to close</p>';
-    document.body.appendChild(box);
-    var big = box.querySelector('img');
-    var closeBtn = box.querySelector('.zoom-close');
-    var opener = null;
+  function initTimeline() {
+    var items = document.querySelectorAll('.life-timeline .tl-item');
+    if (!items.length) return;
 
-    var close = function () {
-      box.hidden = true;
-      box.classList.remove('full');
-      document.body.style.overflow = '';
-      if (opener) opener.focus();
-    };
-    zoomLinks.forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        e.preventDefault();
-        opener = a;
-        var thumb = a.querySelector('img');
-        big.src = a.getAttribute('href');
-        big.alt = thumb ? thumb.alt : '';
-        box.hidden = false;
-        document.body.style.overflow = 'hidden';
-        closeBtn.focus();
-      });
-    });
-    big.addEventListener('click', function (e) {
-      e.stopPropagation();
-      box.classList.toggle('full');
-    });
-    box.addEventListener('click', close);
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && !box.hidden) close();
-    });
+    function reveal(el, instant) {
+      el.classList.remove('is-waiting');
+      el.classList.add('is-in');
+      if (instant) {
+        el.style.transition = 'none';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    }
+    function revealAll(instant) {
+      for (var i = 0; i < items.length; i++) reveal(items[i], instant);
+    }
+
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      docEl.classList.add('rmotion');
+      revealAll(true);
+      return;
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      revealAll(true);
+      return;
+    }
+
+    function nearViewport(el) {
+      var r = el.getBoundingClientRect();
+      var vh = window.innerHeight || 0;
+      return r.top < vh + 200 && r.bottom > -200;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      for (var j = 0; j < entries.length; j++) {
+        var entry = entries[j];
+        if (!entry.isIntersecting) continue;
+        reveal(entry.target, false);
+        io.unobserve(entry.target);
+      }
+    }, { root: null, rootMargin: '200px 0px 200px 0px', threshold: 0 });
+
+    for (var k = 0; k < items.length; k++) {
+      var el = items[k];
+      if (nearViewport(el)) {
+        reveal(el, true);
+      } else {
+        el.classList.add('is-waiting');
+      }
+      io.observe(el);
+    }
+
+    // Fallback: never leave entries stuck faded (instant, no mid-fade)
+    setTimeout(function () {
+      revealAll(true);
+      io.disconnect();
+    }, 2000);
+  }
+
+  // After load so hash/#timeline scroll has settled; fully visible until then.
+  if (document.readyState === 'complete') {
+    initTimeline();
+  } else {
+    window.addEventListener('load', initTimeline);
   }
 })();
