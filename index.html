@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#13294b">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313294b'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23ffffff'%3EES%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="css/style.css?v=20261030c">
+<link rel="stylesheet" href="css/style.css?v=20261031b">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -24,6 +24,7 @@
       <ul id="menu">
         <li><a href="#research">Research</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#hackathons">Hackathons</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#gallery">Posters</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -102,6 +103,9 @@
 
       <!-- Permafrost -->
       <article class="card wide" id="project-permafrost">
+        <div class="card-visual">
+          <img src="assets/projects/permafrost.svg" alt="Abstract schematic of an Arctic coastline with nested contour rings and a coastal settlement grid" width="800" height="450" loading="lazy" decoding="async">
+        </div>
         <div class="card-body">
           <h3>Permafrost thaw risk to infrastructure in Wainwright, Alaska</h3>
           <div class="tags"><span class="tag status">In progress</span><span class="tag">Remote sensing</span><span class="tag">Risk mapping</span><span class="tag">Uncertainty analysis</span></div>
@@ -114,6 +118,9 @@
 
       <!-- Crop insurance -->
       <article class="card wide" id="project-insurance">
+        <div class="card-visual">
+          <img src="assets/projects/insurance.svg" alt="Abstract county grid with scattered loss markers suggesting crop-insurance risk mapping" width="800" height="450" loading="lazy" decoding="async">
+        </div>
         <div class="card-body">
           <h3>Crop insurance losses in the U.S. Corn Belt</h3>
           <div class="tags"><span class="tag status">In progress</span><span class="tag">Spatial statistics</span><span class="tag">Climate risk</span><span class="tag">Crop insurance</span></div>
@@ -125,7 +132,10 @@
       </article>
 
       <!-- Supply chains -->
-      <article class="card wide">
+      <article class="card wide" id="project-supply">
+        <div class="card-visual card-visual-contain">
+          <img src="assets/projects/supply-flow-heatmap.webp" width="1100" height="943" loading="lazy" decoding="async" alt="Heat map of mean annual cereal-grain shipments between the 48 contiguous U.S. states, with origin states on the horizontal axis and destination states on the vertical axis, grouped into the nine NOAA climate regions. Darker blue cells mark larger flows; the darkest cells lie along the diagonal (shipments within a state).">
+        </div>
         <div class="card-body">
           <h3>Supply chains: interstate cereal-grain trade under weather shocks</h3>
           <div class="tags"><span class="tag status">In progress</span><span class="tag">Gravity model</span><span class="tag">Supply chains</span><span class="tag">Drought indices</span></div>
@@ -136,8 +146,13 @@
       </article>
 
       <!-- Rotation -->
-      <article class="card wide">
-        <div class="card-media">
+      <article class="card wide" id="project-rotation">
+        <div class="card-visual card-visual-anim">
+          <picture class="card-anim">
+            <source srcset="assets/projects/rotation-corn.webp" type="image/webp">
+            <img src="assets/projects/rotation-corn.gif" width="720" height="809" loading="lazy" decoding="async" alt="Animated map of Illinois stepping through 2008 to 2024, showing the share of each grid cell planted to corn">
+          </picture>
+          <img class="card-anim-still" src="assets/projects/rotation-corn-still.webp" width="720" height="809" loading="lazy" decoding="async" alt="Map of Illinois corn planting share in 2008">
         </div>
         <div class="card-body">
           <h3>Crop rotation patterns in the U.S. Corn Belt</h3>
@@ -155,20 +170,12 @@
         </div>
       </article>
 
-      <!-- G2F -->
-      <article class="card">
-        <div class="card-media">
-        </div>
-        <div class="card-body">
-          <h3>Genomes to Fields maize prediction</h3>
-          <div class="tags"><span class="tag status">In progress</span><span class="tag">Machine learning</span><span class="tag">Kaggle</span></div>
-          <p>For the Genomes to Fields (G2F) Kaggle challenge, I am building models to predict a binary hybrid-performance outcome from environmental and genetic features. I am comparing logistic regression, a neural network, gradient boosting and a random forest on an 80/20 train&ndash;test split, after target and one-hot encoding, correlation filtering and scaling.</p>
-          <p><strong>Results so far:</strong> Logistic regression did best (accuracy 0.81, AUC 0.88), followed by random forest (0.80, AUC 0.88), gradient boosting (0.79, AUC 0.88) and the neural network (0.74, AUC 0.82).</p>
-        </div>
-      </article>
 
       <!-- Crop decision (in progress) -->
-      <article class="card">
+      <article class="card" id="project-decision">
+        <div class="card-visual">
+          <img src="assets/projects/decision.svg" alt="Abstract grid with a highlighted path suggesting crop choices across space" width="800" height="450" loading="lazy" decoding="async">
+        </div>
         <div class="card-body">
           <h3>Crop decision support system</h3>
           <div class="tags"><span class="tag status">In progress</span><span class="tag">Spatial data</span><span class="tag">Sequence mining</span></div>
@@ -186,7 +193,10 @@
       </article>
 
       <!-- Canola -->
-      <article class="card wide">
+      <article class="card wide" id="project-canola">
+        <div class="card-visual">
+          <img src="assets/projects/canola.svg" alt="Abstract striped field parcels under a satellite swath for canola mapping" width="800" height="450" loading="lazy" decoding="async">
+        </div>
         <div class="card-body">
           <h3>Mapping canola with satellite embeddings</h3>
           <div class="tags"><span class="tag status">In progress</span><span class="tag">Satellite embeddings</span><span class="tag">Random forest</span></div>
@@ -194,6 +204,56 @@
           <p><strong>Approach:</strong> I extracted every canola pixel from the 30&nbsp;m USDA Cropland Data Layer for 2008&ndash;2024 (128.6 million pixel centroids) and sampled the 64-band AlphaEarth Foundations embeddings from Google DeepMind at those locations.</p>
           <p><strong>Early results:</strong> In a 2024 proof of concept with 500 canola and 500 nearby other-crop pixels, a random forest reached 88.0% accuracy (ROC AUC 0.938) on a random split and 82.4% (AUC 0.894) on a stricter spatial split that holds out whole map blocks.</p>
           <p class="note">This is a small pixel-level test, not validated field mapping.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HACKATHONS ============ -->
+<section id="hackathons">
+  <div class="wrap">
+    <h2>Hackathons</h2>
+    <div class="cards hackathon-cards">
+
+      <article class="card hackathon-card" id="hackathon-ashby-2026">
+        <div class="card-body">
+          <h3>Ashby Prize in Computational Science Hackathon</h3>
+          <div class="tags"><span class="tag">2026</span><span class="tag">NCSA / Cancer Center at Illinois</span><span class="tag">Team 20</span></div>
+          <p class="meta">October 17&ndash;18, 2026 &middot; National Center for Supercomputing Applications (NCSA), UIUC</p>
+          <p><strong>Topic:</strong> Multi-modal pathology foundation models for clinical workflows (cancer-related pathology and clinical data).</p>
+          <p>Our team built PATHfinder, a review aid that runs two frozen pathology vision&ndash;language models on colon-cancer whole-slide images, queues regions where the models disagree for human review, and drafts a report that ties claims back to measured slide data.</p>
+        </div>
+      </article>
+
+      <article class="card hackathon-card" id="hackathon-ashby-2025">
+        <div class="card-body">
+          <h3>Ashby Prize in Computational Science Hackathon</h3>
+          <div class="tags"><span class="tag">2025</span><span class="tag">NCSA / CAII</span><span class="tag">Team 16</span><span class="tag">Honorable mention</span></div>
+          <p class="meta">October 25&ndash;26, 2025 &middot; National Center for Supercomputing Applications (NCSA), UIUC</p>
+          <p><strong>Topic:</strong> Virtual CRISPR &mdash; using large language models and prompt engineering to predict CRISPR-screen outcomes in silico.</p>
+          <p>Our team worked on LLM prompting and related computational approaches to prioritize CRISPR experiments, and received an honorable mention.</p>
+        </div>
+      </article>
+
+      <article class="card hackathon-card" id="hackathon-cda-2026">
+        <div class="card-body">
+          <h3>CDA Precision &amp; Digital Agriculture Hackathon</h3>
+          <div class="tags"><span class="tag">2026</span><span class="tag">Center for Digital Agriculture</span><span class="tag">Team AgData Ninjas</span></div>
+          <p class="meta">March 6&ndash;8, 2026 &middot; John Deere Technology Innovation Center, UIUC Research Park</p>
+          <p><strong>Topic:</strong> Interdisciplinary AI and digital-agriculture challenges across smart crops, livestock, generative AI, and analytics tracks.</p>
+          <p>Our team (AgData Ninjas) took part in the Center for Digital Agriculture&rsquo;s Precision &amp; Digital Agriculture Hackathon, collaborating over a weekend on an AI / digital-agriculture challenge.</p>
+        </div>
+      </article>
+
+      <article class="card hackathon-card" id="hackathon-g2f">
+        <div class="card-body">
+          <h3>Genomes to Fields (G2F) maize prediction</h3>
+          <div class="tags"><span class="tag">2025</span><span class="tag">Kaggle / G2F</span><span class="tag">Team hackathon</span></div>
+          <p class="meta">Fall 2025 &middot; Genomes to Fields Kaggle challenge</p>
+          <p><strong>Topic:</strong> Predict a binary maize hybrid-performance outcome from environmental and genetic features.</p>
+          <p>Our team compared several supervised models&mdash;including logistic regression, a neural network, gradient boosting, and a random forest&mdash;after encoding, filtering, and scaling the competition features, and submitted predictions for the Kaggle challenge.</p>
         </div>
       </article>
 
