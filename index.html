@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#13294b">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313294b'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23ffffff'%3EES%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="css/style.css?v=20261031e">
+<link rel="stylesheet" href="css/style.css?v=20261118a">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -62,6 +62,38 @@
         <img src="assets/emine.jpg" width="1000" height="750" alt="Emine mountain biking in a forest, hugging a tree and laughing" fetchpriority="high" decoding="async">
         <figcaption>Off the screen: mountain biking on the trails.</figcaption>
       </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LATEST NEWS ============ -->
+<section id="news" class="news">
+  <div class="wrap">
+    <h2>Latest news</h2>
+    <div class="cards">
+      <article class="card news-card">
+        <figure class="card-visual card-visual-media">
+          <div class="media-frame">
+            <video class="news-video" muted loop playsinline preload="metadata" poster="assets/hackathons/cda-2026-barn-poster.webp" width="1000" height="1078" data-autoplay aria-label="Barn of Tomorrow, an animated barn illustration that loops through eight scenes: 05:30 in the barn, cameras at the feed fence, stall cameras for cud-chewing, a thermal camera at the water trough, a gait camera at the parlour exit, cooling mist from a drone, fly patrol, and the 05:30 herd check on the farmer&rsquo;s phone">
+              <source src="assets/hackathons/cda-2026-barn.mp4" type="video/mp4">
+              <source src="assets/hackathons/cda-2026-barn.webm" type="video/webm">
+              <img src="assets/hackathons/cda-2026-barn-poster.webp" alt="Barn illustration at 05:30: cows in the pen under ceiling cameras, two of them labelled as collar-wearing sensor cows" width="1000" height="1078">
+            </video>
+            <button class="video-toggle" type="button" hidden aria-pressed="false">Pause animation</button>
+          </div>
+          <figcaption>Illustration of ideas for a farm trial, not results; the numbers shown on the cows are made up.</figcaption>
+        </figure>
+        <div class="card-body">
+          <div class="tags"><span class="tag status">New</span><span class="tag">November 2026</span><span class="tag">Team RootCause</span></div>
+          <h3>2nd place, CDA Precision &amp; Digital Agriculture Hackathon (Livestock &amp; Animal Systems), November 2026</h3>
+          <p>Team RootCause took 2nd place in the Livestock &amp; Animal Systems track at the University of Illinois Center for Digital Agriculture hackathon. Our team built a herd-monitoring tool that pairs barn cameras with a few sensor-wearing cows, so the cameras keep checking themselves against real sensor readings and flag the cows that need attention.</p>
+          <a class="news-thumb" href="assets/hackathons/cda-2026-rootcause.webp" target="_blank" rel="noopener">
+            <img src="assets/hackathons/cda-2026-rootcause-thumb.webp" alt="Team RootCause holding their 2nd place certificates" width="480" height="360" loading="lazy" decoding="async">
+            <span>See the award photo</span>
+          </a>
+          <p class="news-links"><a href="#hackathon-cda-2026-fall">Details</a></p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -198,6 +230,21 @@
     <h2>Hackathons</h2>
     <div class="cards hackathon-cards">
 
+      <article class="card hackathon-card" id="hackathon-cda-2026-fall">
+        <figure class="card-visual card-visual-media">
+          <img src="assets/hackathons/cda-2026-rootcause.webp" alt="Four team members stand holding certificates on either side of a large screen that reads &ldquo;Second Place, Livestock &amp; Animal Systems, presented to RootCause, 2026 Precision &amp; Digital Agriculture Hackathon&rdquo;, in front of a yellow wall" width="1400" height="1050" loading="lazy" decoding="async">
+          <figcaption>Team RootCause (Emine Senkardesler, John Enriquez, Mauro Martinez More, Samuel Mintah), 2nd place, Livestock &amp; Animal Systems track.</figcaption>
+        </figure>
+        <div class="card-body">
+          <h3>CDA Precision &amp; Digital Agriculture Hackathon &mdash; 2nd place</h3>
+          <div class="tags"><span class="tag">2026</span><span class="tag">Center for Digital Agriculture</span><span class="tag">Team RootCause</span><span class="tag">2nd place</span></div>
+          <p class="meta">November 13&ndash;15, 2026 &middot; John Deere Technology Innovation Center, Champaign &middot; University of Illinois Urbana-Champaign</p>
+          <p><strong>Track:</strong> Livestock &amp; Animal Systems, Challenge 1, built on the public MmCows multimodal dairy-cow dataset.</p>
+          <p>Team RootCause (Emine Senkardesler, John Enriquez, Mauro Martinez More, Samuel Mintah) took 2nd place in the Livestock &amp; Animal Systems track. Our team built a herd-monitoring tool that pairs barn cameras with a few sensor-wearing cows. The cameras keep checking themselves against real sensor readings and flag the cows that need attention. On the hand-labelled MmCows data, the camera-based and sensor-based behavior calls closely agreed.</p>
+          <p><a href="https://digitalag.illinois.edu/precision-digital-agriculture-hackathon/" target="_blank" rel="noopener">Event page</a> &middot; <a href="#news">Barn animation</a></p>
+        </div>
+      </article>
+
       <article class="card hackathon-card" id="hackathon-ashby-2026">
         <div class="card-body">
           <h3>Ashby Prize in Computational Science Hackathon</h3>
@@ -312,6 +359,16 @@
     </ul>
 
     <ol class="life-timeline">
+
+      <li class="tl-item tl-hack" data-type="hackathon">
+        <div class="tl-year">Nov 2026</div>
+        <div class="tl-card">
+          <span class="tl-type">Hackathon</span>
+          <h3>CDA Precision &amp; Digital Agriculture Hackathon &mdash; 2nd place</h3>
+          <p class="tl-meta">November 13&ndash;15, 2026 &middot; John Deere Technology Innovation Center, Champaign &middot; Team RootCause</p>
+          <p>Team RootCause took 2nd place in the Livestock &amp; Animal Systems track (Challenge 1, MmCows dairy-cow dataset). Our team built a herd-monitoring tool that pairs barn cameras with a few sensor-wearing cows and flags the cows that need attention. <a href="#hackathon-cda-2026-fall">Details</a></p>
+        </div>
+      </li>
 
       <li class="tl-item tl-work" data-type="work">
         <div class="tl-year">Jan 2026 &ndash; Present</div>
@@ -584,6 +641,6 @@
   <div class="wrap">&copy; <span id="year">2026</span> Emine Senkardesler &middot; University of Illinois Urbana-Champaign</div>
 </footer>
 
-<script src="js/main.js?v=20261031e"></script>
+<script src="js/main.js?v=20261118a"></script>
 </body>
 </html>
